@@ -13,9 +13,8 @@ double CBLParseISO8601Date(const char* dateStr);
 #import "CBLParseDate.h"
 
 	NSString *string = @"1970-01-01T00:00:00Z";
-	NSTimeInterval t = CBLParseISO8601Date(string.UTF8String) + [[NSDate dateWithTimeIntervalSince1970: 0.0] 
-																					timeIntervalSinceReferenceDate];
+	NSTimeInterval t = CBLParseISO8601Date(string.UTF8String) + [NSDate dateWithTimeIntervalSince1970:0.0];
 	if (!isnan(t)){
-		NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate: t];
+		NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:t];
 	}			
 ```
